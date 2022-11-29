@@ -43,3 +43,18 @@ function listarPorCategoria(categoria) {
 let categoria = entrada("insira uma categoria: ");
 
 listarPorCategoria(categoria);
+
+function listaProdutosPorValor(minimo, maximo) {
+    produtos.forEach(p => {
+        if(minimo <= p.valor && maximo >= p.valor ) {
+            console.log(p);
+        }
+    })
+    return minimo, maximo;
+};
+
+let valorMinimo = entrada("Valor minimo: ");
+let valorMaximo = entrada("valor maximo: ");
+
+
+listaProdutosPorValor(valorMinimo, valorMaximo);

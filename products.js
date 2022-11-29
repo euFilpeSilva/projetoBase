@@ -31,3 +31,15 @@ function listar() {
 
 }
 
+function listarPorCategoria(categoria) {
+    produtos.forEach(p => {
+        if(categoria.toLowerCase() == p.categoria.toLowerCase()){
+            console.log(p)
+        }
+    })
+    return categoria;
+};
+
+let categoria = entrada("insira uma categoria: ");
+
+listarPorCategoria(categoria);
